@@ -21,15 +21,23 @@
     </div>
     <div class="row">
         <div class="col-2">
-            <nav>
-                <div class="list-group">
-                    <a href="#history" class="list-group-item list-group-item-action active">역사</a>
-                    <a href="#android" class="list-group-item list-group-item-action">안드로이드 폰</a>
-                    <a href="#iphone" class="list-group-item list-group-item-action">아이폰</a>
-                    <a href="#sample" class="list-group-item list-group-item-action">샘플</a>
-                    <a href="#2020" class="list-group-item list-group-item-action">2020년 출시</a>
-                </div>
-            </nav>
+            <ul class="nav flex-column nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="pill" href="#history">역사</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="pill" href="#android">안드로이드 폰</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="pill" href="#iphone">아이폰</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="pill" href="#sample">샘플</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="pill" href="#2020">2020년 출시</a>
+                </li>
+            </ul>
         </div>
         <div class="col-10">
             <section>
@@ -47,7 +55,7 @@
                     <p>
                         아이폰(영어: iPhone)은 미국 애플이 디자인하고 마케팅한 터치스크린 기반 스마트폰 계열이다. 애플의 iOS 모바일 운영 체제를 사용한다. 1세대 아이폰은 애플의 공동 창립자 스티브 잡스가
                         2007년 1월 9일 발표하였다.
-                        <a href="#top"><span class="badge badge-pill badge-primary">top으로</span></a>
+                        <a href="#top"><span class="badge badge-pill badge-primary float-right">top으로</span></a>
                     </p>
                 </article>
                 <article>
@@ -58,36 +66,33 @@
                 <article>
                     <h2 style="margin-top: 30px;"><a id="2020" href="#">2020년 출시 스마트폰</a></h2>
                     <table class="table">
-                        <tr>
-                            <td><strong>제품명</strong></td>
-                            <td>갤럭시 S20</td>
-                            <td>V60 씽큐</td>
-                            <td>아이폰 12</td>
-                            <td>갤럭시 Z 플립</td>
+                        <tr class="d-flex">
+                            <td class="col-2"><strong>제품명</strong></td>
+                            <td class="col-2">갤럭시 S20</td>
+                            <td class="col-2">V60 씽큐</td>
+                            <td class="col-3">아이폰 12</td>
+                            <td class="col-3">갤럭시 Z 플립</td>
                         </tr>
-                        <tr>
-                            <td><strong>제조사</strong></td>
-                            <td>삼성전자</td>
-                            <td>LG전자</td>
-                            <td>애플</td>
-                            <td>삼성전자</td>
+                        <tr class="d-flex">
+                            <td class="col-2"><strong>제조사</strong></td>
+                            <td class="col-2">삼성전자</td>
+                            <td class="col-2">LG전자</td>
+                            <td class="col-3">애플</td>
+                            <td class="col-3">삼성전자</td>
                         </tr>
-                        <tr>
-                            <td><strong>이미지</strong></td>
-                            <td><img src="img/galaxy_s20.jpg" class="img-thumbnail" alt="갤럭시 S20" width="160"></td>
-                            <td><img src="img/v60.jpg" class="img-thumbnail" alt="V60 씽큐" width="160"></td>
-                            <td><img src="img/iphone12.jpg" class="img-thumbnail" alt="아이폰 12" width="160"></td>
-                            <td><img src="img/zflip.jpg" class="img-thumbnail" alt="갤럭시 Z 플립" width="160"></td>
+                        <tr class="d-flex">
+                            <td class="col-2"><strong>이미지</strong></td>
+                            <td class="col-2"><img src="img/galaxy_s20.jpg" class="img-thumbnail" alt="갤럭시 S20" width="160"></td>
+                            <td class="col-2"><img src="img/v60.jpg" class="img-thumbnail" alt="V60 씽큐" width="160"></td>
+                            <td class="col-3"><img src="img/iphone12.jpg" class="img-thumbnail" alt="아이폰 12" width="160"></td>
+                            <td class="col-3"><img src="img/zflip.jpg" class="img-thumbnail" alt="갤럭시 Z 플립" width="160"></td>
                         </tr>
                     </table>
                 </article>
             </section>
         </div>
-        <div class="col-11"></div>
-        <div class="col-1">
-            <a href="#top"><span class="badge badge-pill badge-primary">top으로</span></a>
-        </div>
     </div>
+    <a href="#top"><span class="badge badge-pill badge-primary float-right">top으로</span></a>
 </div>
 
 </body>
