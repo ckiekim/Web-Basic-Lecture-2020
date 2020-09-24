@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gambling</title>
+    <script>
+        let openCount = 0;
+        let numbers = [];
+        let numCount = 0;
+        let money = 10000;
+        function changeNum(id) {
+            let imgDOM = document.getElementById(id);
+            let random = Math.floor(Math.random() * 3);
+            imgDOM.src = `img/number_${random}.png`;
+            openCount++;
+            numbers.push(random);
+            if (openCount === 3) {
+                setTimeout(function() {
+                    playGame();
+                }, 3000);
+            }
+        }
+
+        function playGame() {
+            if (numbers[0] === numbers[1] && numbers[0] === numbers[2]) {
+                money += 8000;
+            } else {
+                money -= 1000;
+            }
+            if (money === 0) {
+                alert('You lose!!!  Game Reset');
+                money = 10000;
+                numCount = 0;
+            } else {
+                numCount++;
+            }
+            let moneyDOM = document.getElementById('money');
+            let countDOM = document.getElementById('count');
+            let firstDOM = document.getElementById('first');
+            let secondDOM = document.getElementById('second');
+            let thirdDOM = document.getElementById('third');
+            moneyDOM.innerHTML = `${money/1000},000`;
+            countDOM.innerHTML = numCount;
+            firstDOM.src = 'img/question.png';
+            secondDOM.src = 'img/question.png';
+            thirdDOM.src = 'img/question.png';
+            openCount = 0;
+            numbers = [];
+        }
+    </script>
+</head>
+<body>
+    <h3><strong>갬블링 게임</strong></h3>
+    <hr>
+    <p>게임 머니: <span id="money" style="color: crimson;">10,000</span>원, 
+       횟수: <span id="count" style="color: crimson;">0</span>회</p>
+    <br>
+    <img id="first" onclick="changeNum('first');" src="img/question.png" width="60">
+    <img id="second" onclick="changeNum('second');" src="img/question.png" width="60">
+    <img id="third" onclick="changeNum('third');" src="img/question.png" width="60">
+</body>
+</html>

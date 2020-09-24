@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let clickCount = 0;
+        let numbers = [];
+        let gameMoney = 10000;
+        let gameCount = 0;
+        function change(id) {
+            let button = document.getElementById(id);
+            let random = Math.floor(Math.random() * 3);
+            button.innerHTML = random;
+            clickCount++;
+            numbers.push(random);
+            if (clickCount === 3) {
+                setTimeout(function() {
+                    playGame();
+                }, 3000);
+            }
+        }
+
+        function playGame() {
+            if (numbers[0] === numbers[1] && numbers[0] === numbers[2])
+                gameMoney += 8000;
+            else
+                gameMoney -= 1000;
+
+            gameCount++;
+            clickCount = 0;
+            numbers = [];
+
+            let moneyDOM = document.getElementById('money');
+            let countDOM = document.getElementById('count');
+            let oneDOM = document.getElementById('one');
+            let twoDOM = document.getElementById('two');
+            let threeDOM = document.getElementById('three');
+            moneyDOM.innerHTML = gameMoney;
+            countDOM.innerHTML = gameCount;
+            oneDOM.innerHTML = '?';
+            twoDOM.innerHTML = '?';
+            threeDOM.innerHTML = '?';
+        }
+    </script>
+</head>
+<body>
+    <h3>갬블링 게임</h3>
+    <hr>
+    <p>게임 머니: <span id="money">10000</span>원
+       횟수: <span id="count">0</span>회</p><br>
+    <button id="one" onclick="change('one');">?</button>
+    <button id="two" onclick="change('two');">?</button>
+    <button id="three" onclick="change('three');">?</button>
+</body>
+</html>
