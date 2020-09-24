@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서객체 조작</title>
+    <script>
+        window.onload = function () {
+            var image = document.getElementById('image');
+            // 속성 변경
+            image.src = 'https://picsum.photos/300/200';
+            //image.src = 'https://picsum.photos/300';
+            image.width = 300;
+            image.height = 200;
+        };
+    </script>
+</head>
+<body>
+    <img id="image">
+</body>
+</html>

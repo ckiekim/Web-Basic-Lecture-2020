@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고전적 이벤트</title>
+    <script>
+        window.onload = function() {
+            let button = document.getElementById('button');
+            button.onclick = function() {
+                alert('버튼 클릭');
+            }
+            button.onmouseover = function() {
+                button.style.color = 'red';
+            }
+        }
+    </script>
+</head>
+<body>
+    <button id="button">버튼</button>
+</body>
+</html>
